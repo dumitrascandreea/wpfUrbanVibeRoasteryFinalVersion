@@ -89,7 +89,7 @@ namespace UrbanVibeRoastery
                         errormessage.Text = "";
                         SqlConnection con = new SqlConnection(@"Data Source=localhost;Initial Catalog=wpfUrbanVibeRoastery;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
                         con.Open();
-                        SqlCommand cmd = new SqlCommand("Insert into Registration (FirstName,LastName,Email,Password) values('" + firstname + "','" + lastname + "','" + email + "','" + password  + "')", con);
+                        SqlCommand cmd = new SqlCommand("Insert into Register (FirstName,LastName,Email,Password) values('" + firstname + "','" + lastname + "','" + email + "','" + password  + "')", con);
                         cmd.CommandType = CommandType.Text;
                         cmd.ExecuteNonQuery();
                         con.Close();
@@ -100,5 +100,3 @@ namespace UrbanVibeRoastery
             }
         }
     }
-}
-}
